@@ -6,4 +6,19 @@ describe 'workstation::default' do
   describe package('tree') do
     it { should be_installed }
   end
+  describe package('emacs') do
+    it { should be_installed }
+  end
+  describe package('git') do
+    it { should be_installed }
+  end
+  describe package('vim-enhanced') do
+    it { should be_installed }
+  end
+  describe package('nano') do
+    it { should be_installed }
+  end
+  describe file('/etc/motd') do
+    it { should be_file }
+  end
 end
